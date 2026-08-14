@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cocinas Integrales Mónica en Zumpango de Ocampo. Diseñamos y fabricamos la cocina a la medida de tus sueños. Calidad, elegancia y funcionalidad.">
+    <meta name="keywords" content="cocinas integrales, carpinteria, cocinas a medida, cocinas modernas, cocinas rusticas, Zumpango, Cocinas Monica">
+    <meta name="author" content="Cocinas Integrales Mónica">
+    <title>Cocinas Integrales Mónica | Diseños a Medida en Zumpango</title>
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">
+                <img src="assets/images/logo.png" alt="Cocinas Integrales Mónica Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">MÓNICA</span>
+                    <span class="logo-subtitle">Cocinas Integrales</span>
+                </div>
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/525919170915?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20cocina%20integral." target="_blank" class="btn btn-primary btn-header">
+                    <i class="fab fa-whatsapp"></i> Cotizar Gratis
+                </a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="inicio">
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/cocina_moderna_blanca.png');"></div>
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/cocina_madera_clasica.png');"></div>
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/cocina_azul_moderna.png');"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">Diseño & Carpintería de Alta Calidad</span>
+                    <h1 class="hero-title">Fabricamos la Cocina de tus Sueños</h1>
+                    <p class="hero-subtitle">Cocinas integrales a medida en Zumpango de Ocampo. Diseños modernos, clásicos e inteligentes adaptados a tu espacio, estilo y presupuesto.</p>
+                    <div class="hero-cta-group">
+                        <a href="#catalogo" class="btn btn-primary btn-lg">Ver Catálogo</a>
+                        <a href="https://wa.me/525919170915?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20cocina%20integral." target="_blank" class="btn btn-outline btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section section-padding" id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">¿Qué Ofrecemos?</span>
+                    <h2 class="section-title">El Arte de la Cocina a Medida</h2>
+                    <p class="section-description">Acompañamos tu proyecto desde el plano digital en 3D hasta la instalación final en tu hogar, garantizando los más altos estándares de calidad.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Diseño Personalizado 3D</h3>
+                        <p>Diseñamos tu cocina adaptada al milímetro de tu espacio. Visualiza los colores, materiales e iluminación antes de fabricar.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Fabricación Propia</h3>
+                        <p>Fabricado en nuestro taller local por carpinteros expertos. Utilizamos maderas seleccionadas, herrajes de cierre suave y melaminas hidrófugas.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <h3>Instalación Profesional</h3>
+                        <p>Nos encargamos del transporte, ajuste, nivelación y ensamble final de cada módulo. Instalamos cubiertas de cuarzo, granito o mármol.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio / Gallery Section -->
+        <section class="portfolio-section section-padding" id="catalogo">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Inspiración</span>
+                    <h2 class="section-title">Estilos de Cocinas Disponibles</h2>
+                    <p class="section-description">Explora nuestros acabados y composiciones estrella. Cada diseño se adapta a la forma y dimensiones de tu espacio.</p>
+                </div>
+                
+                <div class="portfolio-filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="moderna">Modernas</button>
+                    <button class="filter-btn" data-filter="madera">Madera / Rústicas</button>
+                    <button class="filter-btn" data-filter="contemporanea">Contemporáneas</button>
+                    <button class="filter-btn" data-filter="mobiliario">Mobiliario / Mesas</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item-wrapper filter-item moderna">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cocina_moderna_blanca.png" alt="Cocina Moderna Blanca Minimalista" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Moderna</span>
+                                    <h4 class="portfolio-item-title">Elegancia Minimalista Blanca</h4>
+                                    <p class="portfolio-item-desc">Módulos en alto brillo, luz LED bajo alacena, tarja de submontar y herrajes premium.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cocina_moderna_blanca.png" data-title="Elegancia Minimalista Blanca"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Elegancia Blanca Alto Brillo</h3>
+                                <p>Un diseño luminoso que maximiza visualmente los espacios pequeños. Ideal para departamentos y casas modernas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item-wrapper filter-item madera">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cocina_madera_clasica.png" alt="Cocina Clásica de Madera Cálida" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Madera / Rústica</span>
+                                    <h4 class="portfolio-item-title">Calidez Clásica de Madera</h4>
+                                    <p class="portfolio-item-desc">Gabinetes de madera maciza, cubiertas de granito natural y detalles tradicionales.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cocina_madera_clasica.png" data-title="Calidez Clásica de Madera"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Calidez de Madera Tradicional</h3>
+                                <p>Detalles rústicos refinados con la resistencia del roble y el granito. El centro acogedor de tu hogar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item-wrapper filter-item contemporanea">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cocina_azul_moderna.png" alt="Cocina Azul Contemporánea con Detalles Dorados" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Contemporánea</span>
+                                    <h4 class="portfolio-item-title">Contraste Azul & Oro</h4>
+                                    <p class="portfolio-item-desc">Gabinete azul marino mate, tiradores y grifería de latón pulido, cubierta de mármol.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cocina_azul_moderna.png" data-title="Contraste Azul & Oro"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Contraste Azul Marino & Latón</h3>
+                                <p>Un estilo sofisticado e innovador con acentos dorados y mármol blanco. El equilibrio de lujo moderno.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-item-wrapper filter-item moderna">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cosina_naranja.png" alt="Cocina Naranja y Gris Vanguardista" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Moderna</span>
+                                    <h4 class="portfolio-item-title">Cocina Naranja y Gris</h4>
+                                    <p class="portfolio-item-desc">Acabado brillante en naranja, contrastado con gris oscuro mate y alacenas amplias.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cosina_naranja.png" data-title="Cocina Naranja y Gris"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Naranja Brillante y Gris</h3>
+                                <p>Un diseño contemporáneo y atrevido que aporta dinamismo y luz a tu espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-item-wrapper filter-item moderna">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cosina_naranja_2.png" alt="Detalle Cocina Naranja" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Moderna</span>
+                                    <h4 class="portfolio-item-title">Detalle Cocina Naranja</h4>
+                                    <p class="portfolio-item-desc">Cajoneras de cierre suave, organizadores inteligentes y herrajes premium.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cosina_naranja_2.png" data-title="Detalle Cocina Naranja"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Detalles de Organización Naranja</h3>
+                                <p>Herrajes internos optimizados para el almacenamiento de utensilios y despensa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-item-wrapper filter-item moderna">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cosinaroja.jpg" alt="Cocina Roja Pasión" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Moderna</span>
+                                    <h4 class="portfolio-item-title">Cocina Roja Pasión</h4>
+                                    <p class="portfolio-item-desc">Laca roja de alto brillo, jaladeras de perfil corrido y campana de isla.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cosinaroja.jpg" data-title="Cocina Roja Pasión"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Laca Roja y Acero Inoxidable</h3>
+                                <p>Una declaración de estilo audaz y moderna, combinada con superficies de fácil limpieza.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="portfolio-item-wrapper filter-item contemporanea">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/cosina_cafe_gris.jpg" alt="Cocina Café y Gris Plomo" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Contemporánea</span>
+                                    <h4 class="portfolio-item-title">Cocina Café y Gris Plomo</h4>
+                                    <p class="portfolio-item-desc">Maderas texturizadas en color chocolate oscuro con cubiertas y muros gris cemento.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/cosina_cafe_gris.jpg" data-title="Cocina Café y Gris Plomo"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Textura Madera Café y Gris</h3>
+                                <p>El encuentro perfecto entre la calidez de la madera y el diseño industrial gris.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="portfolio-item-wrapper filter-item madera mobiliario">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/mesitascafe.jpg" alt="Mesas Nido de Madera Maciza" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-category">Mobiliario / Mesas</span>
+                                    <h4 class="portfolio-item-title">Mesas de Centro de Taller</h4>
+                                    <p class="portfolio-item-desc">Mesitas nido de centro fabricadas a mano en madera sólida con acabado laqueado mate.</p>
+                                    <button class="btn btn-icon view-gallery-btn" data-img="assets/images/mesitascafe.jpg" data-title="Mesas de Centro de Taller"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Mesas Nido de Madera Maciza</h3>
+                                <p>Mobiliario complementario fabricado en nuestro taller de Zumpango con la misma calidad de nuestras cocinas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Us Section -->
+        <section class="about-section section-padding" id="nosotros">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img-box">
+                        <img src="assets/images/cocina_madera_clasica.png" alt="Taller de Cocinas Mónica" class="about-img-main" loading="lazy">
+                        <div class="experience-badge">
+                            <span class="number">10+</span>
+                            <span class="text">Años de<br>Carpintería</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <span class="section-tag">¿Quiénes Somos?</span>
+                        <h2 class="section-title">Carpintería Local con Estándares de Fábrica</h2>
+                        <p>En <strong>Cocinas Integrales Mónica</strong> combinamos el amor por el detalle artesanal de un carpintero de confianza con el uso de software de diseño y herramientas modernas de producción. Diseñamos espacios donde la familia convive y crea recuerdos.</p>
+                        
+                        <div class="about-features">
+                            <div class="about-feature-item">
+                                <div class="feature-icon"><i class="fas fa-check"></i></div>
+                                <div>
+                                    <h4>Medición y Presupuesto sin Costo</h4>
+                                    <p>Asistimos a tu domicilio en Zumpango de Ocampo para tomar medidas exactas y mostrarte muestras físicas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="about-feature-item">
+                                <div class="feature-icon"><i class="fas fa-check"></i></div>
+                                <div>
+                                    <h4>Garantía de Satisfacción</h4>
+                                    <p>Todos nuestros trabajos cuentan con garantía por escrito en ensamble, correderas y fijación a muro.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Contact Section -->
+    <footer class="main-footer" id="contacto">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Cocinas Integrales Mónica Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-title">MÓNICA</span>
+                            <span class="logo-subtitle">Cocinas Integrales</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Dedicados a embellecer hogares a través de mobiliario de cocina a medida, ergonómico y duradero en Zumpango de Ocampo y alrededores.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/525919170915" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/CocinasIntegralesMonica?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/cocintra_monica/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:cocintramonica@live.com.mx" aria-label="Correo Electrónico"><i class="fas fa-envelope"></i></a>
+                        <a href="https://maps.app.goo.gl/enhfkfrsLQ4tjq21A" target="_blank" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Hours -->
+                <div class="footer-col">
+                    <h3>Horarios de Atención</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Lunes a Viernes</span>
+                            <span class="hours">10:00 AM - 7:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Sábado</span>
+                            <span class="hours">10:00 AM - 4:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Domingo</span>
+                            <span class="hours">10:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                    <div class="payment-methods">
+                        <h4>Métodos de pago aceptados</h4>
+                        <div class="payment-icons">
+                            <span class="payment-badge" title="Efectivo"><i class="fas fa-money-bill-wave"></i> Efectivo</span>
+                            <span class="payment-badge" title="Transferencia"><i class="fas fa-university"></i> Transferencia</span>
+                            <span class="payment-badge" title="Tarjeta"><i class="fas fa-credit-card"></i> Tarjeta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Info & Address -->
+                <div class="footer-col contact-col">
+                    <h3>Información de Contacto</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span class="label">Teléfono / WhatsApp:</span>
+                                <a href="tel:5919170915">591 917 0915</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="label">Correo Electrónico:</span>
+                                <a href="mailto:cocintramonica@live.com.mx">cocintramonica@live.com.mx</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <span class="label">Dirección:</span>
+                                <p>Av Hidalgo 103-Loc B, San Lorenzo, 55604 Zumpango de Ocampo, Edo. de México</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Map Section -->
+        <div class="footer-map-container">
+            <div class="container">
+                <h3>Ubicación del Local</h3>
+                <div class="map-wrapper">
+                    <!-- Google Maps Iframe showing correct location in Av Hidalgo 103 Zumpango -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.864391696238!2d-99.102213!3d19.792874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d192f15904d9c7%3A0xe5a3c9be01e3b5e0!2sAv%20Hidalgo%20103%2C%20San%20Lorenzo%2C%2055600%20Zumpango%20de%20Ocampo%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="map-action">
+                    <a href="https://maps.app.goo.gl/enhfkfrsLQ4tjq21A" target="_blank" class="btn btn-outline btn-sm">
+                        <i class="fas fa-directions"></i> Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Cocinas Integrales Mónica. Todos los derechos reservados.</p>
+                <p>Diseño y Carpintería Profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <h4 class="lightbox-title" id="lightboxTitle"></h4>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

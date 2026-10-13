@@ -1210,3 +1210,14 @@ h1, h2, h3, h4, h5, h6 {
 :root[data-theme="dark"] .hero-section .btn-outline { color: #fff; border-color: #fff; }
 :root[data-theme="dark"] .hero-section .btn-outline:hover { color: #0b132b; background: #fff; }
 @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } }
+
+/* Dark theme contrast fix */
+:root[data-theme="dark"] .services-section,
+:root[data-theme="dark"] .about-section { background-color: var(--light-bg); }
+:root[data-theme="dark"] .portfolio-card { background-color: var(--light-surface); border-color: var(--border-light); }
+:root[data-theme="dark"] .portfolio-card h3,
+:root[data-theme="dark"] .portfolio-card h4,
+:root[data-theme="dark"] .service-card h3 { color: var(--text-dark); }
+:root[data-theme="dark"] .portfolio-card p,
+:root[data-theme="dark"] .service-card p { color: var(--text-muted-dark); }
+:root[data-theme="dark"] .service-card { background-color: var(--light-surface); }

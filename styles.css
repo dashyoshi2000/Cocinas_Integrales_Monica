@@ -1154,3 +1154,59 @@ h1, h2, h3, h4, h5, h6 {
         gap: 32px;
     }
 }
+
+
+/* Tema oscuro: activado desde el control de navegación */
+.theme-toggle {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    background: var(--light-surface);
+    color: var(--text-dark);
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: background-color .25s, color .25s, border-color .25s;
+}
+.theme-toggle:hover { color: var(--primary); border-color: var(--primary); }
+.theme-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #8db4ff;
+    --primary-hover: #b5ceff;
+    --primary-light: #25385c;
+    --light-bg: #0b132b;
+    --light-surface: #17213b;
+    --light-card: #17213b;
+    --text-dark: #f4f6fa;
+    --text-muted-dark: #b3c1df;
+    --border-light: #394765;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.3);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.28);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,.35);
+}
+:root[data-theme="dark"] .main-header { background-color: rgba(15,23,43,.94); }
+:root[data-theme="dark"] .main-header.scrolled,
+:root[data-theme="dark"] .navbar { background-color: var(--light-surface); }
+:root[data-theme="dark"] .service-card,
+:root[data-theme="dark"] .portfolio-item-wrapper,
+:root[data-theme="dark"] .about-img-box,
+:root[data-theme="dark"] .contact-form-wrapper,
+:root[data-theme="dark"] .contact-card,
+:root[data-theme="dark"] .testimonial-card { background-color: var(--light-surface); }
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea { background-color: #101c33; color: var(--text-dark); border-color: var(--border-light); }
+:root[data-theme="dark"] .btn-primary,
+:root[data-theme="dark"] .filter-btn.active,
+:root[data-theme="dark"] .btn-outline:hover { background-color: #3969c9; color: #fff; }
+:root[data-theme="dark"] .btn-outline { border-color: var(--primary); }
+:root[data-theme="dark"] .hero-section,
+:root[data-theme="dark"] .site-footer { color: #f4f6fa; }
+:root[data-theme="dark"] .hero-section .btn-outline { color: #fff; border-color: #fff; }
+:root[data-theme="dark"] .hero-section .btn-outline:hover { color: #0b132b; background: #fff; }
+@media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } }

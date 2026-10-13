@@ -1210,3 +1210,35 @@ h1, h2, h3, h4, h5, h6 {
 :root[data-theme="dark"] .hero-section .btn-outline { color: #fff; border-color: #fff; }
 :root[data-theme="dark"] .hero-section .btn-outline:hover { color: #0b132b; background: #fff; }
 @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } }
+
+
+/* Ajustes de contraste: tema oscuro para catálogo, servicios y nosotros */
+:root[data-theme="dark"] .services-section,
+:root[data-theme="dark"] .about-section {
+    background-color: var(--light-bg);
+}
+:root[data-theme="dark"] .portfolio-card,
+:root[data-theme="dark"] .service-card {
+    background-color: var(--light-surface);
+    border-color: var(--border-light);
+}
+:root[data-theme="dark"] .portfolio-info,
+:root[data-theme="dark"] .portfolio-info h3,
+:root[data-theme="dark"] .service-card h3,
+:root[data-theme="dark"] .services-section .section-title,
+:root[data-theme="dark"] .about-section .section-title {
+    color: var(--text-dark);
+}
+:root[data-theme="dark"] .portfolio-info p,
+:root[data-theme="dark"] .service-card p,
+:root[data-theme="dark"] .services-section .section-description,
+:root[data-theme="dark"] .about-content p {
+    color: var(--text-muted-dark);
+}
+:root[data-theme="dark"] .portfolio-info {
+    background-color: var(--light-surface);
+}
+/* El texto sobre las fotos debe continuar blanco sobre su overlay oscuro. */
+:root[data-theme="dark"] .portfolio-overlay .portfolio-item-title {
+    color: #fff;
+}

@@ -21,6 +21,11 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script>
+        try {
+            if (localStorage.getItem("cim-theme") === "dark") document.documentElement.dataset.theme = "dark";
+        } catch (error) { /* Navegación privada o almacenamiento restringido */ }
+    </script>
 </head>
 <body>
 
@@ -46,6 +51,9 @@
             </nav>
 
             <div class="header-actions">
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Activar tema oscuro" aria-pressed="false" title="Cambiar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
                 <a href="https://wa.me/525919170915?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20cocina%20integral." target="_blank" class="btn btn-primary btn-header">
                     <i class="fab fa-whatsapp"></i> Cotizar Gratis
                 </a>

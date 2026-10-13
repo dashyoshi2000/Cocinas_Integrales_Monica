@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /* Selector de tema claro / oscuro */
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (dark) => {
+        if (dark) document.documentElement.dataset.theme = 'dark';
+        else delete document.documentElement.dataset.theme;
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-pressed', String(dark));
+            themeToggle.setAttribute('aria-label', dark ? 'Activar tema claro' : 'Activar tema oscuro');
+            themeToggle.title = dark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro';
+            themeToggle.querySelector('i').className = dark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    };
+    setTheme(document.documentElement.dataset.theme === 'dark');
+    if (themeToggle) themeToggle.addEventListener('click', () => {
+        const dark = document.documentElement.dataset.theme !== 'dark';
+        setTheme(dark);
+        try { localStorage.setItem('cim-theme', dark ? 'dark' : 'light'); } catch (error) { /* Sin almacenamiento */ }
+    });
+
 
     /* ==========================================
        1. EFECTO DE SCROLL EN NAVBAR

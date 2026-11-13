@@ -21,13 +21,11 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <script>
-        try {
-            if (localStorage.getItem("cim-theme") === "dark") document.documentElement.dataset.theme = "dark";
-        } catch (error) { /* Navegación privada o almacenamiento restringido */ }
-    </script>
 </head>
-<body>
+<body class="november-theme">
+
+    <!-- Contenedor de Pétalos de Cempasúchil y Hojas de Otoño (Temática de Noviembre) -->
+    <div class="november-particles" id="novemberParticles" aria-hidden="true"></div>
 
     <!-- Header / Navbar -->
     <header class="main-header" id="header">
@@ -35,7 +33,7 @@
             <a href="#inicio" class="logo">
                 <img src="assets/images/logo.png" alt="Cocinas Integrales Mónica Logo" class="logo-img">
                 <div class="logo-text">
-                    <span class="logo-title">MÓNICA</span>
+                    <span class="logo-title">MÓNICA <span class="cempasuchil-badge" title="Edición Especial de Noviembre">✿</span></span>
                     <span class="logo-subtitle">Cocinas Integrales</span>
                 </div>
             </a>
@@ -51,8 +49,9 @@
             </nav>
 
             <div class="header-actions">
-                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Activar tema oscuro" aria-pressed="false" title="Cambiar tema">
-                    <i class="fas fa-moon" aria-hidden="true"></i>
+                <button class="btn-theme-toggle active" id="novemberToggle" aria-label="Activar o desactivar temática de noviembre" title="Activar/Desactivar temática y pétalos de noviembre">
+                    <span class="theme-toggle-flower" aria-hidden="true">🌼</span>
+                    <span class="theme-toggle-label">Noviembre</span>
                 </button>
                 <a href="https://wa.me/525919170915?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20cocina%20integral." target="_blank" class="btn btn-primary btn-header">
                     <i class="fab fa-whatsapp"></i> Cotizar Gratis
@@ -64,6 +63,8 @@
                 </button>
             </div>
         </div>
+        <!-- Guirnalda de Papel Picado (Visible en Temática de Noviembre) -->
+        <div class="papel-picado-bar" aria-hidden="true"></div>
     </header>
 
     <!-- Main Content -->
@@ -79,9 +80,12 @@
             
             <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="hero-badge">Diseño & Carpintería de Alta Calidad</span>
+                    <span class="hero-badge">
+                        <span class="november-badge-icon" aria-hidden="true">🌼</span>
+                        <span class="hero-badge-text" data-default="Diseño &amp; Carpintería de Alta Calidad" data-november="Especial de Noviembre · Tradición y Calidez en tu Hogar">Especial de Noviembre · Tradición y Calidez en tu Hogar</span>
+                    </span>
                     <h1 class="hero-title">Fabricamos la Cocina de tus Sueños</h1>
-                    <p class="hero-subtitle">Cocinas integrales a medida en Zumpango de Ocampo. Diseños modernos, clásicos e inteligentes adaptados a tu espacio, estilo y presupuesto.</p>
+                    <p class="hero-subtitle">Cocinas integrales a medida en Zumpango de Ocampo. En este mes de tradición y reunión familiar, renovamos el corazón de tu hogar con diseños modernos, clásicos e inteligentes.</p>
                     <div class="hero-cta-group">
                         <a href="#catalogo" class="btn btn-primary btn-lg">Ver Catálogo</a>
                         <a href="https://wa.me/525919170915?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20cocina%20integral." target="_blank" class="btn btn-outline btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>

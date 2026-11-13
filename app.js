@@ -1,23 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* Selector de tema claro / oscuro */
-    const themeToggle = document.getElementById('themeToggle');
-    const setTheme = (dark) => {
-        if (dark) document.documentElement.dataset.theme = 'dark';
-        else delete document.documentElement.dataset.theme;
-        if (themeToggle) {
-            themeToggle.setAttribute('aria-pressed', String(dark));
-            themeToggle.setAttribute('aria-label', dark ? 'Activar tema claro' : 'Activar tema oscuro');
-            themeToggle.title = dark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro';
-            themeToggle.querySelector('i').className = dark ? 'fas fa-sun' : 'fas fa-moon';
-        }
-    };
-    setTheme(document.documentElement.dataset.theme === 'dark');
-    if (themeToggle) themeToggle.addEventListener('click', () => {
-        const dark = document.documentElement.dataset.theme !== 'dark';
-        setTheme(dark);
-        try { localStorage.setItem('cim-theme', dark ? 'dark' : 'light'); } catch (error) { /* Sin almacenamiento */ }
-    });
-
 
     /* ==========================================
        1. EFECTO DE SCROLL EN NAVBAR
@@ -169,6 +150,81 @@ document.addEventListener('DOMContentLoaded', () => {
                 lightboxModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
+        });
+    }
+
+    /* ==========================================
+       6. TEMÁTICA DE NOVIEMBRE (Cempasúchil y Otoño)
+       ========================================== */
+    const novemberToggle = document.getElementById('novemberToggle');
+    const novemberParticles = document.getElementById('novemberParticles');
+    const heroBadgeText = document.querySelector('.hero-badge-text');
+
+    // SVGs de pétalos de cempasúchil, flor de cempasúchil y hojas de otoño
+    const particleSVGs = [
+        // Pétalo de cempasúchil naranja intenso
+        `<svg viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8 6 6 12 8 17C9.5 20.5 14.5 20.5 16 17C18 12 16 6 12 2Z" fill="#ff7b00" opacity="0.9"/><path d="M12 4C10 8 9.5 12 10.5 16" stroke="#ffb703" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>`,
+        // Pétalo de cempasúchil dorado/ámbar
+        `<svg viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.5 6.5 6.5 13 9 18C10.5 21 13.5 21 15 18C17.5 13 16.5 6.5 12 2Z" fill="#ffa200" opacity="0.9"/></svg>`,
+        // Flor de cempasúchil pequeña
+        `<svg viewBox="0 0 28 28" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><g fill="#ff8800"><circle cx="14" cy="7" r="4.5"/><circle cx="21" cy="14" r="4.5"/><circle cx="14" cy="21" r="4.5"/><circle cx="7" cy="14" r="4.5"/><circle cx="9" cy="9" r="4.2" fill="#ff6a00"/><circle cx="19" cy="9" r="4.2" fill="#ff6a00"/><circle cx="19" cy="19" r="4.2" fill="#ff6a00"/><circle cx="9" cy="19" r="4.2" fill="#ff6a00"/><circle cx="14" cy="14" r="3.5" fill="#ffb703"/></g></svg>`,
+        // Hoja de otoño terracota / maple
+        `<svg viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.5 7.5L20 6L17 11.5L21 15L15 16.5L13 22H11L9 16.5L3 15L7 11.5L4 6L9.5 7.5L12 2Z" fill="#d94e1f" opacity="0.85"/></svg>`
+    ];
+
+    function createNovemberParticles() {
+        if (!novemberParticles) return;
+        novemberParticles.innerHTML = '';
+        const count = window.innerWidth < 768 ? 12 : 20;
+
+        for (let i = 0; i < count; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'november-particle';
+            const size = Math.floor(Math.random() * 12) + 14; // 14px a 25px
+            const left = Math.random() * 100;
+            const duration = (Math.random() * 9 + 11).toFixed(2); // 11s a 20s
+            const delay = (Math.random() * -20).toFixed(2);
+            const swayMid = `${Math.floor(Math.random() * 80 - 40)}px`;
+            const swayEnd = `${Math.floor(Math.random() * 90 - 45)}px`;
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${left}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            particle.style.setProperty('--sway-mid', swayMid);
+            particle.style.setProperty('--sway-end', swayEnd);
+
+            particle.innerHTML = particleSVGs[i % particleSVGs.length];
+            novemberParticles.appendChild(particle);
+        }
+    }
+
+    function applyNovemberThemeState(isActive) {
+        document.body.classList.toggle('november-theme', isActive);
+        if (novemberToggle) {
+            novemberToggle.classList.toggle('active', isActive);
+            novemberToggle.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        }
+        if (heroBadgeText) {
+            heroBadgeText.textContent = isActive
+                ? heroBadgeText.getAttribute('data-november')
+                : heroBadgeText.getAttribute('data-default');
+        }
+    }
+
+    createNovemberParticles();
+
+    // Recuperar preferencia guardada (por defecto activa en noviembre)
+    const savedTheme = localStorage.getItem('cocinasMonicaNovemberTheme');
+    const initialActive = savedTheme === null ? true : savedTheme === 'true';
+    applyNovemberThemeState(initialActive);
+
+    if (novemberToggle) {
+        novemberToggle.addEventListener('click', () => {
+            const isNowActive = !document.body.classList.contains('november-theme');
+            applyNovemberThemeState(isNowActive);
+            localStorage.setItem('cocinasMonicaNovemberTheme', String(isNowActive));
         });
     }
 

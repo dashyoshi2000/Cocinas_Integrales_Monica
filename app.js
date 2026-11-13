@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 3000); // Cambia cada 3 segundos
+        slideInterval = setInterval(nextSlide, 7000); // Cambia cada 7 segundos
     }
 
     function stopSlideShow() {

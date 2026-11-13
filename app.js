@@ -228,4 +228,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ==========================================
+       7. TEMA OSCURO / CLARO (Dark / Light Mode)
+       ========================================== */
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+
+    function applyDarkModeState(isDark) {
+        document.body.classList.toggle('dark-theme', isDark);
+        if (darkModeToggle) {
+            darkModeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        }
+        if (darkModeIcon) {
+            darkModeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    }
+
+    const savedDarkMode = localStorage.getItem('cocinasMonicaDarkMode');
+    const initialDark = savedDarkMode === 'true';
+    applyDarkModeState(initialDark);
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            const isNowDark = !document.body.classList.contains('dark-theme');
+            applyDarkModeState(isNowDark);
+            localStorage.setItem('cocinasMonicaDarkMode', String(isNowDark));
+        });
+    }
+
 });

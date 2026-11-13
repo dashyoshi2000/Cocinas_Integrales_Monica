@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+        slideInterval = setInterval(nextSlide, 3000); // Cambia cada 3 segundos
     }
 
     function stopSlideShow() {
@@ -154,11 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================
-       6. TEMÁTICA DE NOVIEMBRE (Cempasúchil y Otoño)
+       6. TEMÁTICA DE NOVIEMBRE (Cempasúchil y Otoño - Predeterminada)
        ========================================== */
-    const novemberToggle = document.getElementById('novemberToggle');
     const novemberParticles = document.getElementById('novemberParticles');
-    const heroBadgeText = document.querySelector('.hero-badge-text');
 
     // SVGs de pétalos de cempasúchil, flor de cempasúchil y hojas de otoño
     const particleSVGs = [
@@ -200,33 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function applyNovemberThemeState(isActive) {
-        document.body.classList.toggle('november-theme', isActive);
-        if (novemberToggle) {
-            novemberToggle.classList.toggle('active', isActive);
-            novemberToggle.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        }
-        if (heroBadgeText) {
-            heroBadgeText.textContent = isActive
-                ? heroBadgeText.getAttribute('data-november')
-                : heroBadgeText.getAttribute('data-default');
-        }
-    }
-
+    // Activar temática de noviembre de forma predeterminada
+    document.body.classList.add('november-theme');
     createNovemberParticles();
-
-    // Recuperar preferencia guardada (por defecto activa en noviembre)
-    const savedTheme = localStorage.getItem('cocinasMonicaNovemberTheme');
-    const initialActive = savedTheme === null ? true : savedTheme === 'true';
-    applyNovemberThemeState(initialActive);
-
-    if (novemberToggle) {
-        novemberToggle.addEventListener('click', () => {
-            const isNowActive = !document.body.classList.contains('november-theme');
-            applyNovemberThemeState(isNowActive);
-            localStorage.setItem('cocinasMonicaNovemberTheme', String(isNowActive));
-        });
-    }
 
     /* ==========================================
        7. TEMA OSCURO / CLARO (Dark / Light Mode)
